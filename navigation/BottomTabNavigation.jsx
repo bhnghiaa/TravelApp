@@ -1,12 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Home from '../../screens/home/Home';
-import Location from '../../screens/location/Location';
-import Chat from '../../screens/chat/Chat';
-import Profile from '../../screens/profile/Profile';
+import Home from '../screens/home/Home';
+import Location from '../screens/location/Location';
+import Chat from '../screens/chat/Chat';
+import Profile from '../screens/profile/Profile';
 import { Ionicons } from '@expo/vector-icons'
-import { COLORS } from '../../constants/theme';
+import { COLORS } from '../constants/theme';
 const Tab = createBottomTabNavigator();
 const tabBarStyle = {
     paddingTop: 10,

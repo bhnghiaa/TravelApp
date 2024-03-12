@@ -32,7 +32,8 @@ const Onboarding = () => {
                 showHorizontalScrollIndicator={false}
                 data={slides}
                 keyExtractor={(item) => item.id}
-                renderItem={({ item }) => <Slides item={item} />}
+                renderItem={({ item }) => <Slides item={item}
+                />}
             />
         </View>
 

@@ -6,8 +6,11 @@ import * as Splassscreen from 'expo-splash-screen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Onboarding from './screens/onboarding/Onboarding';
-import BottomTabNavigation from './components/navigation/BottomTabNavigation';
-
+import BottomTabNavigation from './navigation/BottomTabNavigation';
+import Search from './screens/search/Search';
+import CountryDetails from './screens/details/CountryDetails';
+import Recommended from './screens/details/Recommended';
+import PlaceDetails from './screens/details/PlaceDetails';
 const Stack = createNativeStackNavigator();
 
 const App = () => {
@@ -32,6 +35,11 @@ const App = () => {
         <Stack.Navigator>
           <Stack.Screen name="Onboarding" component={Onboarding} options={{ headerShown: false }} />
           <Stack.Screen name="Bottom" component={BottomTabNavigation} options={{ headerShown: false }} />
+          <Stack.Screen name="Search" component={Search} />
+          <Stack.Screen name="CountryDetails" component={CountryDetails} />
+          <Stack.Screen name="Recommended" component={Recommended} />
+          <Stack.Screen name="PlaceDetails" component={PlaceDetails} />
+
         </Stack.Navigator>
       </NavigationContainer>
     </>
