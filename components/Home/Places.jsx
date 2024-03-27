@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, VirtualizedList } from 'react-native'
 import React from 'react'
 import HeightSpacer from '../Reusable/HeightSpacer'
 import { SIZES } from '../../constants/theme'
-import Country from '../../tiles/Country/Country'
+import Country from '../Tiles/Country/Country'
 
 const Places = () => {
     const countries = [
@@ -45,7 +45,6 @@ const Places = () => {
     return (
         <View>
             <HeightSpacer height={20} />
-
             <VirtualizedList
                 data={countries}
                 horizontal

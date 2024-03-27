@@ -7,7 +7,7 @@ import ReusableText from './ReusableText'
 import { COLORS } from '../../constants/theme'
 const Rating = ({ rating }) => {
     return (
-        <View style={reusable.rowWidthSpace("flex-start")}>
+        <View style={reusable.rowWithSpace("flex-start")}>
             <MaterialCommunityIcons
                 name="star"
                 size={20}

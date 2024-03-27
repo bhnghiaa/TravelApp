@@ -1,14 +1,11 @@
-import { StyleSheet, TouchableOpacity, View, Text, FlatList } from 'react-native'
+import { FlatList, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import reusable from '../Reusable/reusable.style'
-import ReusableText from '../Reusable/ReusableText'
-import { TEXT } from '../../constants/theme'
-import { COLORS, SIZES } from '../../constants/theme'
-import ReusableTile from '../Reusable/ReusableTile'
+import { SafeAreaView } from 'react-native-safe-area-context'
+import AppBar from '../../components/Reusable/AppBar'
+import { COLORS } from '../../constants/theme'
+import ReusableTile from '../../components/Reusable/ReusableTile'
 import { useNavigation } from '@react-navigation/native'
-import { Feather } from '@expo/vector-icons'
-import HotelCard from '../Tiles/Hotels/HotelCard'
-const BestHotels = () => {
+const HotelList = () => {
     const hotels = [
         {
             "_id": "id1",
@@ -58,31 +55,36 @@ const BestHotels = () => {
     ]
     const navigation = useNavigation()
     return (
-        <View style={styles.container}>
-            <View style={[ reusable.rowWithSpace("space-between"), { paddingBottom: 20 } ]}>
-                <ReusableText text={"Nearby Hotels"}
-                    family={"medium"}
-                    size={TEXT.large}
-                    color={COLORS.black}
+        <SafeAreaView style={{ marginHorizontal: 20 }}>
+            <View style={{ height: 50 }}>
+                <AppBar
+                    top={10}
+                    left={0}
+                    right={0}
+                    color={COLORS.white}
+                    title="Nearby Hotels"
+                    icon="search1"
+                    color1={COLORS.white}
+                    onPress1={() => navigation.navigate("HotelSearch")}
+                    onPress={() => navigation.goBack()}
                 />
-                <TouchableOpacity onPress={() => navigation.navigate("HotelList")}>
-                    <Feather name='list' size={20} />
-                </TouchableOpacity>
             </View>
-            <FlatList
-                data={hotels}
-                keyExtractor={item => item._id}
-                horizontal
-                showsHorizontalScrollIndicator={false}
-                contentContainerStyle={{ columnGap: SIZES.medium }}
-                renderItem={({ item }) => (
-                    <HotelCard item={item} margin={0} onPress={() => navigation.navigate("HotelsDetails", { id: item._id })} />
-                )}
-            />
-        </View>
+
+            <View style={{ paddingTop: 20 }}>
+                <FlatList
+                    data={hotels}
+                    keyExtractor={item => item._id}
+                    renderItem={({ item }) => (
+                        <View style={{ marginBottom: 15 }}>
+                            <ReusableTile item={item} onPress={() => navigation.navigate("HotelsDetails", { id: item._id })} />
+                        </View>
+                    )}
+                />
+            </View>
+        </SafeAreaView>
     )
 }
 
-export default BestHotels
+export default HotelList
 
 const styles = StyleSheet.create({})

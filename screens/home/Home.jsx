@@ -14,7 +14,7 @@ const Home = ({ navigation }) => {
     return (
         <SafeAreaView style={reusable.container}>
             <View>
-                <View style={reusable.rowWidthSpace('space-between')}>
+                <View style={reusable.rowWithSpace('space-between')}>
                     <ReusableText text={"Hey User!"}
                         family={"regular"}
                         size={TEXT.xxLarge}

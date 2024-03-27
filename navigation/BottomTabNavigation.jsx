@@ -14,7 +14,7 @@ const tabBarStyle = {
     borderRadius: 12,
     height: 55,
     position: "absolute",
-    bottom: 30,
+    bottom: 15,
     left: 20,
     right: 20,
 }

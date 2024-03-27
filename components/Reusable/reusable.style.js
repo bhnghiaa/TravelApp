@@ -5,9 +5,10 @@ const reusable = StyleSheet.create({
         flex: 1,
         paddingHorizontal: 10,
     },
-    rowWidthSpace: (justifyContent) => ({
+    rowWithSpace: (justifyContent) => ({
         flexDirection: "row",
         justifyContent: justifyContent,
+        alignItems: "center",
     }),
 })
 

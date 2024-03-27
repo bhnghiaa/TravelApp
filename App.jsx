@@ -11,6 +11,10 @@ import Search from './screens/search/Search';
 import CountryDetails from './screens/details/CountryDetails';
 import Recommended from './screens/details/Recommended';
 import PlaceDetails from './screens/details/PlaceDetails';
+import HotelsDetails from './screens/details/HotelsDetails';
+import HotelList from './screens/details/HotelList';
+import HotelSearch from './screens/search/HotelSearch';
+import SelectRoom from './screens/details/SelectRoom';
 const Stack = createNativeStackNavigator();
 
 const App = () => {
@@ -32,14 +36,17 @@ const App = () => {
   return (
     <><StatusBar style="auto" />
       <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="Onboarding" component={Onboarding} options={{ headerShown: false }} />
-          <Stack.Screen name="Bottom" component={BottomTabNavigation} options={{ headerShown: false }} />
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="Onboarding" component={Onboarding} />
+          <Stack.Screen name="Bottom" component={BottomTabNavigation} />
           <Stack.Screen name="Search" component={Search} />
           <Stack.Screen name="CountryDetails" component={CountryDetails} />
           <Stack.Screen name="Recommended" component={Recommended} />
           <Stack.Screen name="PlaceDetails" component={PlaceDetails} />
-
+          <Stack.Screen name="HotelsDetails" component={HotelsDetails} />
+          <Stack.Screen name="HotelList" component={HotelList} />
+          <Stack.Screen name="HotelSearch" component={HotelSearch} />
+          <Stack.Screen name="SelectRoom" component={SelectRoom} />
         </Stack.Navigator>
       </NavigationContainer>
     </>

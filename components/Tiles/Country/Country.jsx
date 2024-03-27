@@ -1,10 +1,11 @@
 import { StyleSheet, TouchableOpacity, View } from 'react-native'
 import React from 'react'
-import { TEXT } from '../../constants/theme'
-import NetworkImage from '../../components/Reusable/NetworkImage'
-import ReusableText from '../../components/Reusable/ReusableText'
-import { COLORS } from '../../constants/theme'
-import HeightSpacer from '../../components/Reusable/HeightSpacer'
+import { TEXT } from '../../../constants/theme'
+import NetworkImage from '../../Reusable/NetworkImage'
+import ReusableText from '../../Reusable/ReusableText'
+import { COLORS } from '../../../constants/theme'
+import HeightSpacer from '../../Reusable/HeightSpacer'
+
 import { useNavigation } from '@react-navigation/native'
 const Country = ({ item }) => {
     const navigation = useNavigation();

@@ -58,7 +58,7 @@ const Recommendations = () => {
     ]
     return (
         <View style={styles.container}>
-            <View style={[ reusable.rowWidthSpace("space-between"), { paddingBottom: 20 } ]}>
+            <View style={[ reusable.rowWithSpace("space-between"), { paddingBottom: 20 } ]}>
                 <ReusableText text={"Recommendations"}
                     family={"medium"}
                     size={TEXT.large}
@@ -86,7 +86,7 @@ export default Recommendations
 
 const styles = StyleSheet.create({
     container: {
-        paddingTop: 30,
+        paddingTop: 20,
     }
 })
 

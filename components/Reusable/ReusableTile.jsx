@@ -11,7 +11,7 @@ const ReusableTile = ({ item, onPress }) => {
     return (
         <TouchableOpacity style={styles.container} onPress={onPress}>
             <View style={{ flexDirection: 'row' }}>
-                <View style={reusable.rowWidthSpace('flex-start')}>
+                <View style={reusable.rowWithSpace('flex-start')}>
                     <NetworkImage source={item.imageUrl} width={80} height={80} radius={12} />
                 </View>
                 <WidthSpacer width={15} />
@@ -31,7 +31,7 @@ const ReusableTile = ({ item, onPress }) => {
 
                     <HeightSpacer height={8} />
 
-                    <View style={reusable.rowWidthSpace("flex-start")}>
+                    <View style={reusable.rowWithSpace("flex-start")}>
                         <Rating rating={item.rating} />
                         <WidthSpacer width={8} />
                         <ReusableText
