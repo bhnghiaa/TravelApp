@@ -8,49 +8,23 @@ import { useNavigation } from '@react-navigation/native'
 const HotelList = () => {
     const hotels = [
         {
-            "_id": "id1",
-            "country_id": "c1",
-            "location": "USA",
-            "title": "Walt Disney World",
-            "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-            "rating": 4.7,
-            "review": "1204 Reviews"
+            "_id": "64c674d23cfa5e847bcd5430",
+            "country_id": "64c62bfc65af9f8c969a8d04",
+            "title": "Seaside Resort",
+            "imageUrl": "https://d326fntlu7tb1e.cloudfront.net/uploads/f5cae706-9e63-4a7d-9fdd-f63f34b93f37-seaside.jpeg",
+            "rating": 4.9,
+            "review": "1204 Reviews",
+            "location": "Miami Beach, FL"
         },
+
         {
-            "_id": "id2",
-            "country_id": "c1",
-            "location": "USA",
-            "title": "Statue of Liberty",
-            "imageUrl": "https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+            "_id": "64c67442776ed29f19727fd7",
+            "country_id": "64c62bfc65af9f8c969a8d04",
+            "title": "Luxury Hotel 1",
+            "imageUrl": "https://d326fntlu7tb1e.cloudfront.net/uploads/4fdc30c2-08c5-4bca-b05c-d8b8a60b020f-luxury1.webp",
             "rating": 4.7,
-            "review": "1204 Reviews"
-        },
-        {
-            "_id": "id3",
-            "country_id": "c1",
-            "location": "USA",
-            "title": "Statue of Liberty",
-            "imageUrl": "https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
-            "rating": 4.7,
-            "review": "1204 Reviews"
-        },
-        {
-            "_id": "id4",
-            "country_id": "c1",
-            "location": "USA",
-            "title": "Statue of Liberty",
-            "imageUrl": "https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
-            "rating": 4.7,
-            "review": "1204 Reviews"
-        },
-        {
-            "_id": "id5",
-            "country_id": "c2",
-            "location": "USA",
-            "title": "Statue of Liberty",
-            "imageUrl": "https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
-            "rating": 4.7,
-            "review": "1204 Reviews"
+            "review": "1204 Reviews",
+            "location": "New York City, NY"
         }
     ]
     const navigation = useNavigation()

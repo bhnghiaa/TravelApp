@@ -5,7 +5,7 @@ import MapView, { Marker } from 'react-native-maps'
 const HotelMap = ({ coordinates }) => {
     return (
         <Pressable>
-            <MapView style={styles.maps}>
+            <MapView style={styles.maps} initialRegion={coordinates}>
                 <Marker coordinate={coordinates} title={coordinates.title} />
             </MapView>
         </Pressable>

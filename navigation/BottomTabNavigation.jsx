@@ -7,6 +7,7 @@ import Chat from '../screens/chat/Chat';
 import Profile from '../screens/profile/Profile';
 import { Ionicons } from '@expo/vector-icons'
 import { COLORS } from '../constants/theme';
+import TopTab from './TopTab';
 const Tab = createBottomTabNavigator();
 const tabBarStyle = {
     paddingTop: 10,
@@ -57,7 +58,7 @@ const BottomTabNavigation = () => {
                     )
                 }
             } />
-            <Tab.Screen name="Profile" component={Profile} options={
+            <Tab.Screen name="Profile" component={TopTab} options={
                 {
                     tabBarStyle: tabBarStyle,
                     tabBarShowLabel: false,

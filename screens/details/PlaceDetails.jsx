@@ -18,7 +18,7 @@ const PlaceDetails = () => {
     const route = useRoute();
     const id = route.params.id;
     console.log(id);
-    const place = {
+    const places = {
         "_id": "id1",
         "country_id": "country1",
         "title": "Statue of Libery",
@@ -69,7 +69,7 @@ const PlaceDetails = () => {
         <ScrollView>
             <View>
                 <NetworkImage
-                    source={place.imageUrl}
+                    source={places.imageUrl}
                     width={"100%"}
                     height={350}
                     radius={30}
@@ -79,7 +79,7 @@ const PlaceDetails = () => {
                     top={40}
                     left={20}
                     right={20}
-                    title={place.title}
+                    title={places.title}
                     color={COLORS.white}
                     icon={"search1"}
                     color1={COLORS.white}
@@ -90,13 +90,13 @@ const PlaceDetails = () => {
             <View style={styles.description}>
                 <HeightSpacer height={15} />
                 <ReusableText
-                    text={place.location}
+                    text={places.location}
                     family={"medium"}
                     size={TEXT.large}
                     color={COLORS.black}
                 />
 
-                <DescriptionText text={place.description} />
+                <DescriptionText text={places.description} />
 
                 <View style={{ alignContent: "center" }}>
                     <HeightSpacer height={20} />
@@ -109,14 +109,14 @@ const PlaceDetails = () => {
                             color={COLORS.black}
                         />
 
-                        <TouchableOpacity onPress={() => navigation.navigate('PopularHotels', place.country_id)}>
+                        <TouchableOpacity onPress={() => navigation.navigate('PopularHotels', places.country_id)}>
                             <Feather name="list" size={20} />
                         </TouchableOpacity>
                     </View>
 
                     <HeightSpacer height={20} />
 
-                    <PopularList data={place.popular} />
+                    <PopularList data={places.popular} />
 
                     <ReusableBtn
                         onPress={() => navigation.navigate("HotelSearch")}
